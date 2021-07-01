@@ -1,0 +1,54 @@
+{
+    "name": "monish/drinkwater",
+    "description": "drink more water",
+    "keywords": [
+        "monish",
+        "drinkwater"
+    ],
+    "homepage": "https://github.com/monish/drinkwater",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "monish",
+            "email": "monish@monish.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "illuminate/support": "^8.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Monish\\Drinkwater\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Monish\\Drinkwater\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Monish\\Drinkwater\\DrinkwaterServiceProvider"
+            ],
+            "aliases": {
+                "Drinkwater": "Monish\\Drinkwater\\DrinkwaterFacade"
+            }
+        }
+    }
+}
